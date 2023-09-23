@@ -48,6 +48,13 @@ public class ResumeController {
         return resumeService.getAllResume();
     }
 
+    //이력서 단일 조회
+    @GetMapping("/resume/{userId}")
+    public ResumeResponseDto resumeById(@PathVariable String userId){
+        return resumeService.getResumeByUserId(userId);
+    }
+
+
 
 }
 

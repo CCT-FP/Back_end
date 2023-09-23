@@ -2,6 +2,7 @@ package com.example.priny.Company.Controller;
 
 import com.example.priny.Company.Dto.PostResponseDTO;
 import com.example.priny.Company.Dto.PostSaveRequestDTO;
+import com.example.priny.Company.Dto.PostUpdateDTO;
 import com.example.priny.Company.SKResponse;
 import com.example.priny.Company.Service.PostService;
 import lombok.RequiredArgsConstructor;
@@ -36,7 +37,7 @@ public class PostController {
 
     //공고 작성
     @PostMapping("/jobPost")
-    public ResponseEntity<SKResponse> saveJobPost(@RequestBody PostSaveRequestDTO postSaveRequestDTO){
+    public ResponseEntity<SKResponse> JobPostSave(@RequestBody PostSaveRequestDTO postSaveRequestDTO){
         HttpHeaders headers = new HttpHeaders();
         postService.JobPostSave(postSaveRequestDTO.getUserId(),postSaveRequestDTO);
         return ResponseEntity.ok((new SKResponse("success","공고가 등록되었습니다!")));
@@ -45,8 +46,8 @@ public class PostController {
 
 //    //공고 수정
 //    @PutMapping("/editPost/{id}")
-//    public ResponseEntity<JobPostResponseDTO> editJobPost(@PathVariable Long id, @RequestBody JobPostEditDTO editDTO) {
-//        JobPostResponseDTO editedJobPost = jobPostService.edit(id, editDTO);
+//    public ResponseEntity<PostResponseDTO> editJobPost(@PathVariable Long id, @RequestBody PostUpdateDTO editDTO) {
+//        PostResponseDTO editedJobPost = postService.postedit(id, editDTO);
 //        return ResponseEntity.ok(editedJobPost);
 //    }
 

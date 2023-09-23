@@ -3,6 +3,7 @@ package com.example.priny.Company.Service;
 import com.example.priny.Company.Domain.Post;
 import com.example.priny.Company.Dto.PostResponseDTO;
 import com.example.priny.Company.Dto.PostSaveRequestDTO;
+import com.example.priny.Company.Dto.PostUpdateDTO;
 import com.example.priny.Company.Repository.PostRepository;
 import com.example.priny.user.domain.User;
 import com.example.priny.user.repository.UserRepository;
@@ -50,10 +51,7 @@ public class PostServiceImpl implements PostService{
 
 
 //    @Override
-//    public JobPostResponseDTO update(Long id, JobPostEditDTO jobPostEditDTO) {
-//        JobPost jobPost = jobPostRepository.update(id, jobPostEditDTO);
-//        return jobPostToResponseDTO(jobPost);
-//    }
+//    public void postedit()
 
 
     @Override
